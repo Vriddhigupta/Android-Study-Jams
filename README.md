@@ -1,29 +1,29 @@
-# Android-Study-Jams
-
-College Bus Tracking System
+NewsBit
 
 <b> Problem Statement: </b>
 
-Over a great period, many issues have been faced by our students traveling by college busses. One of the challenges they face every day is to know the location of the bus.
-Technology plays a vital role in day-to-day life activities which in turn made great changes in many work fields and out of them Mobile Application is one of the major developments. Mobile Application can be used effectively for this job as they are widely used and are known for easy access.
+Over the period of time, the importance of reading newspaper and knowing about current affairs are becoming important and sometimes your local newspaper shop forgets to deliver newspaper at your doorstep. Technology plays a vital role in day-to-day life activities which in turn made great changes in many work fields and out of them Mobile Application is one of the major developments. Mobile Application can be used effectively as a newspaper. Hnece we have come up with this idea of creating a news application wherein the user can read all latest news and also save any news article for future reference.
 
 <b> Proposed Solution : </b>
 
-This project proposes a “Bus Tracking System” to keep track of the college bus and provides all the information about GNITS Bus Services. Its features include location of busses and prediction of bus delays. It accepts student data allowing them to register to the application. This application uses GPS tracking techniques by acquiring the geo-location from the driver's mobile device and mapping it to the database. Google API’s are used for accuracy in finding the location of the busses. Currently the app works for GNITS institute only. The project's scope is to extend it for other institutions to transport services in future in collaboration.
+This project proposes a “NewsBit” to keep the user updated with latest news and provide a feature of bookmarking important articles for future read. Other features include registering and logging into the application. It accepts user data allowing them to register to the application. This project takes the help of a News API to fetch and display the latest news. Users have the option of bookmarking their favourite news which is done by using Room database. The list of bookmarked articles is unique to different users. Firebase Authentication is used for register/signin feature. The project's scope is to extend it to allow users to like and comment on news articles.
 
 <img width="559" alt="sampleimages" src="https://user-images.githubusercontent.com/18289261/142846646-a6858641-ad88-43aa-b8bb-b690fd7126f1.png">
     	  	
 <b> Functionality & Concepts used : </b>
 
-- The App has a very simple and interactive interface which helps the students select their route bus and track its location. Following are few android concepts used to achieve the functionalities in app : 
-- Constraint Layout : Most of the activities in the app uses a flexible constraint layout, which is easy to handle for different screen sizes.
-- Simple & Easy Views Design : Use of familiar audience EditText with hints and interactive buttons made it easier for students to register or sign in without providing any detailed instructions pages. Apps also uses App Navigation to switch between different screens.
-- RecyclerView : To present the list of different route busses we used the efficient recyclerview.
-Google Maps API : We are also using the Google Maps API free version for  below 1000 users. In future if the user base increases we will go for the upgraded plan too.
-- LiveData & Room Database : We are also using LiveData to update & observe any changes in the Bus driver's locations received from their mobile at real time and update it to local databases using Room. Coordinates are then updated in the bus route screen and students can track their route bus locations.
+- The App has a very simple and interactive interface which helps the users to register and make an account, login into their accounts, read latest news about country and world, bookmark relevant news articles. Following are few android concepts used to achieve the functionalities in app : 
+- Constraint Layout and Relative Layout : Most of the activities in the app uses a flexible constraint layout or a Relative Layout, which is easy to handle for different screen sizes and using relative layout eases the work of positioning views on the screen. 
+- Simple & Easy Views Design and Navigation Componenet : Use of familiar audience EditText with hints and interactive buttons made it easier for users to register or sign in without providing any detailed instructions pages. Apps also uses App Navigation to switch between different screens. Hence a Navigation graph is created to navigate between screens.
+- RecyclerView : To present the list of latest news and bookmarked articles we used the efficient recyclerview.
+- News API : We are also using the News API to fetch news. Here is the link for the same. [News API](https://newsapi.org/)
+- Retrofit and Moshi : They are used to fetch the data using the API and parsing it to object-oriented notion.
+- Firebase Authentication : It is used to provide authentication features that is Registration and Login.
+- LiveData & Room Database : We are also using LiveData to continuously update news on real-time basis. Room database is used to store the bookmarked articles in the app on the client's device.
+- Coroutines : We have used Coroutines in two places : 
 
 <b> Application Link & Future Scope : </b>
 
-The app is currently in the Alpha testing phase with GNITS institute with a limited no. of users, You can access the app : [YOUR APP LINK HERE](either Github link or Google Play store link of published app or .apk file).
+You can access the app : [YOUR APP LINK HERE](either Github link or Google Play store link of published app or .apk file).
 
-Once the app is fully tested and functional in GNITS institute, we plan to talk to neighboring colleges also to propose this app idea and collaborate with them on this transportation service. We aim that by next year most of the colleges in our district will use Bus tracking apps to check out their bus routes and be informed all the time. Also we are planning to include emergency SOS features for students traveling in busses if they are stuck somewhere. 
+We plan to integrate multiple news API and fetch news from different news channels and newspapers. We aim to implement a feature allowing the user to like and share their views on a news article.
